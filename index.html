@@ -32,9 +32,22 @@
 
 
   <!-- // Other stuff -->
+  <script>
+    // Define your API key here
+    const MAP_API_KEY = "AIzaSyCh4DYJ4gbE13Akkesf_ev_UdNuWIjp6QA";
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJoU_Msw9-Z9aMEDSJDhA7dsJrlmxMXeE&callback=Function.prototype"></script>
+    // Dynamically load the Google Maps API script
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${MAP_API_KEY}&callback=initMap`;
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
 
+    // Optional: Define the initMap function if needed
+    function initMap() {
+      console.log('Google Maps API initialized');
+    }
+  </script>
 </head>
 <body>
 
